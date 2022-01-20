@@ -3,7 +3,7 @@ CFLAGS = -Wall
 OBJS = main.o foo.o bar.o
 
 main: ${OBJS}
-	${CC} -o main main.o foo.o bar.o
+	${CC} -o main ${OBJS}
 
 foo.o: ./foo/foo.c
 	${CC} -c ./foo/foo.c
