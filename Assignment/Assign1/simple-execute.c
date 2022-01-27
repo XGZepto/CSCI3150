@@ -29,6 +29,7 @@ int spawn_command(int in, int out, struct command *cmd){
 	if (child_pid == 0 ){
 
 		if (in != STDIN_FILENO){
+			// should be replaced with dup2; same for the following
 			close(STDIN_FILENO);
 			dup(in);
 			close(in);
