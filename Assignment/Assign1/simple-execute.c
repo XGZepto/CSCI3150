@@ -7,8 +7,9 @@
 
 /*	
 	|-----------Group Information-----------|
-	I don't have a group.
-	This file is ZHOU, Yixiang's work.
+		I don't have a group.
+		This file is ZHOU, Yixiang's work.
+		SID: 1155157100
 	|---------------------------------------|
 */
 
@@ -114,7 +115,7 @@ int shell_execute(char ** args, int argc){
 			else break;
 	}
 
-	// flush the content of the last pipe to the standard output and closer the read side of this pipe.
+	// flush the content of the last pipe to the standard output and close the read side of this pipe.
 	flush_pipe(PIPE_FD[0], STDOUT_FILENO);
 	close(PIPE_FD[0]);
 	
