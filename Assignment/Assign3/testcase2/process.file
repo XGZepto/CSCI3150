@@ -1,0 +1,3 @@
+ProcessNum  2
+pidnum:12, arrival_time:10, execution_time:200
+pidnum:5, arrival_time:10, execution_time:300

@@ -1,0 +1,5 @@
+ProcessNum  4
+pidnum:123, arrival_time:50, execution_time:90
+pidnum:13, arrival_time:80, execution_time:220
+pidnum:1023, arrival_time:10, execution_time:1660
+pidnum:12, arrival_time:80, execution_time:8
