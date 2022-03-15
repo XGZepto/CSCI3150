@@ -62,7 +62,11 @@ int shell_execute(char ** args, int argc){
 
 	// head and tail indicate the position of each individual command
 	while (head < argc - 1){
+<<<<<<< HEAD
 
+=======
+		
+>>>>>>> c153bbc4ac6abb334709221fa14a7ce0032b82ff
 		while(tail < argc - 1 && (args + tail)[0][0] != '|') tail++;
 		
 		struct command *cmd = malloc(sizeof(struct command));
@@ -75,6 +79,7 @@ int shell_execute(char ** args, int argc){
 		if (tail == argc - 1){
 			// if this is the last command, output to the terminal
 			OUTPUT_FD = STDOUT_FILENO;
+<<<<<<< HEAD
 			spawn_command(INPUT_FD, OUTPUT_FD, cmd);
 		} else {
 			// otherwise create a new pipe and redirect the output to write side of the new pipe
@@ -88,6 +93,19 @@ int shell_execute(char ** args, int argc){
 			INPUT_FD = PIPE_FD[0];
 		}
 		
+=======
+			spawn_command(INPUT_FD, OUTPUT_FD, cmd);
+		} else {
+			// otherwise create a new pipe and redirect the output to write side of the new pipe
+			pipe(PIPE_FD);
+			OUTPUT_FD = PIPE_FD[1];
+			spawn_command(INPUT_FD, OUTPUT_FD, cmd);
+			// the input of the next command is the read side of the new pipe
+			INPUT_FD = PIPE_FD[0];
+		}
+
+		close(PIPE_FD[1]);
+>>>>>>> c153bbc4ac6abb334709221fa14a7ce0032b82ff
 		free(cmd);
 
 		if (tail >= argc - 1) break;
@@ -95,7 +113,10 @@ int shell_execute(char ** args, int argc){
 			else break;
 	}
 
+<<<<<<< HEAD
 	// Piped commands run concurrently.
+=======
+>>>>>>> c153bbc4ac6abb334709221fa14a7ce0032b82ff
 	pid_t wpid;
 	int status = 0;
 	while ((wpid = wait(&status)) > 0); // wait for all the child processes 
