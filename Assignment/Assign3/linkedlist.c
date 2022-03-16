@@ -20,12 +20,11 @@ Node Find(LinkedList* Llist, Process proc){
 }
 
 LinkedList* AddTail(LinkedList* Llist, Process proc){
-    Node node = (Node)malloc(sizeof(Node));
+    LinkedList* node = (LinkedList*)malloc(sizeof(LinkedList));
     node->proc = proc;
     node->next = NULL;
     LinkedList* pt = Llist;
     while ( pt -> next){
-        printf("LEAK JUMP 0x%08x\n", pt);
         pt = pt->next;
     }
     pt -> next = node;

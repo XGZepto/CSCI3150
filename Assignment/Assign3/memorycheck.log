@@ -1,8 +1,8 @@
-==13056== Memcheck, a memory error detector
-==13056== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==13056== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
-==13056== Command: ./Scheduler
-==13056== 
+==2206== Memcheck, a memory error detector
+==2206== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==2206== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==2206== Command: ./Scheduler
+==2206== 
 Process number: 5
 36 10 10
 1023 10 160
@@ -19,98 +19,124 @@ Period: 300
 current_time: 0
 next_process_id: 0
 active_queue: -1
-QUEUE2 0x04a52c60
-QUEUE2 FIRST 0x00000000
 
 EnQueue: 36
 EnQueue: 1023
 current_time: 10
 next_process_id: 2
 active_queue: 2
-QUEUE2 0x04a52c60
-QUEUE2 FIRST 0x04a544a0
 task found in active queue 2.
-ACTIVE QUEUE 0x04a52c60
 Process1023 Process36 
-==13056== Conditional jump or move depends on uninitialised value(s)
-==13056==    at 0x109944: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==  Uninitialised value was created by a heap allocation
-==13056==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==13056==    by 0x109471: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056== 
+==2206== Conditional jump or move depends on uninitialised value(s)
+==2206==    at 0x108CA2: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Uninitialised value was created by a heap allocation
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x1088F9: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206== 
 Task 1023 remains in active queue.
-==13056== Invalid write of size 8
-==13056==    at 0x10AB3A: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==  Address 0x4a55778 is 0 bytes after a block of size 8 alloc'd
-==13056==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==13056==    by 0x10AB26: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056== 
-==13056== Invalid write of size 8
-==13056==    at 0x10AB42: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==  Address 0x4a55780 is 8 bytes after a block of size 8 alloc'd
-==13056==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==13056==    by 0x10AB26: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056== 
-==13056== Invalid write of size 4
-==13056==    at 0x10AB49: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==  Address 0x4a55788 is 16 bytes after a block of size 8 alloc'd
-==13056==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
-==13056==    by 0x10AB26: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056== 
-==13056== Invalid write of size 8
-==13056==    at 0x10AB50: AddTail (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A49: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==  Address 0x4a55798 is 24 bytes after a block of size 16 in arena "client"
-==13056== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C4B: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a34294 is 0 bytes after a block of size 4 alloc'd
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x109C39: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C51: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a34298 is 4 bytes after a block of size 4 alloc'd
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x109C39: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C57: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a3429c is 8 bytes after a block of size 4 alloc'd
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x109C39: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C5D: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a342a0 is 12 bytes after a block of size 4 alloc'd
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x109C39: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C63: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a342a4 is 16 bytes after a block of size 4 alloc'd
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x109C39: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C69: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a342a8 is 16 bytes after a block of size 8 in arena "client"
+==2206== 
+==2206== Invalid write of size 4
+==2206==    at 0x109C6F: AddTail (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D73: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a342b4 is 20 bytes before an unallocated block of size 4,168,992 in arena "client"
+==2206== 
+LEAK JUMP 0x04a31948
+==2206== Invalid read of size 4
+==2206==    at 0x109F0D: LlistPrint (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108D90: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a342b4 is 20 bytes before an unallocated block of size 4,168,992 in arena "client"
+==2206== 
+Process36 Process1023 
 
-valgrind: m_mallocfree.c:305 (get_bszB_as_is): Assertion 'bszB_lo == bszB_hi' failed.
-valgrind: Heap block lo/hi size mismatch: lo = 80, hi = 0.
-This is probably caused by your program erroneously writing past the
-end of a heap block and corrupting heap metadata.  If you fix any
-invalid writes reported by Memcheck, this assertion failure will
-probably go away.  Please try that before reporting this as a bug.
+current_time: 20
+next_process_id: 2
+active_queue: 2
+task found in active queue 2.
+==2206== Invalid read of size 4
+==2206==    at 0x109F0D: LlistPrint (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108B6F: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==  Address 0x4a342b4 is 20 bytes before an unallocated block of size 4,168,992 in arena "client"
+==2206== 
+Process36 Process1023 
+--2206-- VALGRIND INTERNAL ERROR: Valgrind received a signal 11 (SIGSEGV) - exiting
+--2206-- si_code=1;  Faulting address: 0x0;  sp: 0x6848de74
 
+valgrind: the 'impossible' happened:
+   Killed by fatal signal
 
 host stacktrace:
-==13056==    at 0x58046FFA: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x58047127: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x580472CB: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x580514B4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x5803DE9A: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x5803CD9F: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x58041F04: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x5803C1D8: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x58017AF4: ??? (in /usr/lib/x86_64-linux-gnu/valgrind/memcheck-amd64-linux)
-==13056==    by 0x1008DDC9E0: ???
-==13056==    by 0x1008CA9F2F: ???
-==13056==    by 0x1008CA9F17: ???
-==13056==    by 0x1008CA9F2F: ???
-==13056==    by 0x1008CA9F3F: ???
+==2206==    at 0x5804670E: ??? (in /usr/lib/valgrind/memcheck-x86-linux)
 
 sched status:
   running_tid=1
 
-Thread 1: status = VgTs_Runnable (lwpid 13056)
-==13056==    at 0x10ADFB: LlistPrint (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109A6C: scheduler (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-==13056==    by 0x109D3C: main (in /home/zepto/CSCI3150/Assignment/Assign3/Scheduler)
-client stack range: [0x1FFEFFD000 0x1FFF000FFF] client SP: 0x1FFEFFF8D0
-valgrind stack range: [0x1008BAA000 0x1008CA9FFF] top usage: 9480 of 1048576
+Thread 1: status = VgTs_Runnable (lwpid 2206)
+==2206==    at 0x483021B: malloc (in /usr/lib/valgrind/vgpreload_memcheck-x86-linux.so)
+==2206==    by 0x48B819A: __fopen_internal (iofopen.c:65)
+==2206==    by 0x48B8281: fopen@@GLIBC_2.1 (iofopen.c:89)
+==2206==    by 0x109B4E: outprint (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108C2F: scheduler (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
+==2206==    by 0x108F44: main (in /home/csci3150/CSCI3150/Assignment/Assign3/Scheduler)
 
 
 Note: see also the FAQ in the source distribution.
