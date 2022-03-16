@@ -1,4 +1,5 @@
 *.o
 *.log
 *.cfg
+*.file
 Scheduler

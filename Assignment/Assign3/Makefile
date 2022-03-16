@@ -1,5 +1,5 @@
 CC=gcc
-FLAG= -Wall
+FLAG= -Wall -m32
 
 Scheduler: scheduler-exec.o scheduler-impl.o linkedlist.o queue.o
 		$(CC) -o Scheduler scheduler-impl.o scheduler-exec.o linkedlist.o queue.o $(FLAG)
