@@ -2,6 +2,13 @@
 const char *HD = "HD";
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
+/*
+	Author:	ZHOU, Yixiang
+	SID:	1155157100
+	Date:	19 March 2022
+
+*/
+
 // #define _DEBUG_
 // uncomment to enable debug mode
 
@@ -21,31 +28,6 @@ void DEBUG_INFO(int offset, int inode_num, inode *cur_node){
 	printf("indirect_block: %d\n", cur_node->indirect_block);
 	printf("sub_file_number: %d\n", cur_node->sub_file_number);
 	puts("");
-}
-
-int show_all_blocks(int inode_number){
-	inode *cur_node = fetch_inode(inode_number);
-
-	printf("inode info.\n");
-	printf("inode_number: %d\n", cur_node->inode_number);
-	printf("file_type: %d\n", cur_node->file_type);
-	printf("file_size: %d\n", cur_node->file_size);
-	printf("block_number: %d\n", cur_node->block_number);
-	printf("direct_block: %d, %d\n", cur_node->direct_block[0], cur_node->direct_block[1]);
-	printf("indirect_block: %d\n", cur_node->indirect_block);
-	printf("sub_file_number: %d\n", cur_node->sub_file_number);
-
-	int disk = open(HD, O_RDWR);
-
-	if (cur_node->block_number >= 3){
-		for (int i = 0; i + 3 <= cur_node->block_number; ++i){
-			int indirect_block_number = fetch_indirect_block_number(cur_node->indirect_block, i);
-			printf("%d %d ", i, indirect_block_number);
-		}
-	}
-	puts("");
-	close(disk);
-	return 0;
 }
 
 inode *fetch_inode(int inode_num){
@@ -191,10 +173,6 @@ int open_t(char *pathname){
 }
 
 int read_t(int inode_number, int offset, void *buf, int count){
-
-	#ifdef _DEBUG_
-	show_all_blocks(inode_number);
-	#endif
 
 	int read_bytes = 0;
 	inode *cur_node = fetch_inode(inode_number);
