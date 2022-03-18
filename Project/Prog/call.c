@@ -2,15 +2,13 @@
 const char *HD = "HD";
 #define min(a, b) ((a) < (b) ? (a) : (b))
 
-/*
-	Author:	ZHOU, Yixiang
-	SID:	1155157100
-	Date:	19 March 2022
-
-*/
-
+// 
+// 	Author:	ZHOU, Yixiang
+// 	SID:	1155157100
+// 	Date:	19 March 2022
+// 
 // #define _DEBUG_
-// uncomment to enable debug mode
+// uncomment the above line to enable debug mode
 
 void warning(char *msg){
 	fprintf(stderr, "%s\n", msg);
