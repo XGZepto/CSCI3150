@@ -11,3 +11,6 @@ The main objective of this course is to teach students the principles of operati
 - 20/01/2022 Added [Lab 1](Lab/Lab1).
 - 27/01/2022 Added [Lab 2](Lab/Lab2).
 - 28/01/2022 Added [Assignment 1](Assignment/Assign1).
+- 28/02/2022 Added [Assignment 2](Assignment/Assign2).
+- 15/03/2022 Added [Assignment 3](Assignment/Assign3).
+- 19/03/2022 Added [Project](Project).

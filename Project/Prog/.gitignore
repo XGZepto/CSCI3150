@@ -1,2 +1,7 @@
 HD
+call
+open_test
+read_test
+test_result
 *.o
+test-cases/code/plato.txt
