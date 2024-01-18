@@ -1,3 +1,7 @@
+Disclaimer: It has been brought to my attention that several students enrolled in this course may be utilizing this repository as a study aid. I would like to encourage you to revisit the academic integrity policies set forth by the university in relation to the use of such resources for ongoing coursework. Furthermore, I bear no personal responsibility for any inaccuracies or errors that may be present. Please use this resource responsibly and critically.
+
+---
+
 # CSCI3150 Introduction to Operating Systems - Spring 2022
 
 ## Description
