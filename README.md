@@ -1,3 +1,5 @@
+
+
 Disclaimer: It has been brought to my attention that several students enrolled in this course may be utilizing this repository as a study aid. I would like to encourage you to revisit the academic integrity policies set forth by the university in relation to the use of such resources for ongoing coursework. Furthermore, I bear no personal responsibility for any inaccuracies or errors that may be present. Please use this resource responsibly and critically.
 
 ---
@@ -6,7 +8,7 @@ Disclaimer: It has been brought to my attention that several students enrolled i
 
 ## Description
 
-The main objective of this course is to teach students the principles of operating systems. We will mainly cover the following topics: process management, memory management, concurrency programming, and file systems. Protection and security, design and implementation methodology, and performance evaluation will also be discssued with the above topics. See more on the [course website^](https://blackboard.cuhk.edu.hk/ultra/courses/_154006_1/cl/outline).
+The main objective of this course is to teach students the principles of operating systems. We will mainly cover the following topics: process management, memory management, concurrency programming, and file systems. Protection and security, design and implementation methodology, and performance evaluation will also be discussed with the above topics. See more on the [course website^](https://blackboard.cuhk.edu.hk/ultra/courses/_154006_1/cl/outline).
 
 ***^Limited Availability***
 
